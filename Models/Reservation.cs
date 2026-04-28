@@ -19,7 +19,7 @@ public class Reservation : IValidatableObject
     public TimeOnly StartTime { get; set; }
 
     public TimeOnly EndTime { get; set; }
- 
+    
     [Required]
     public string Status { get; set; } = string.Empty;
 
