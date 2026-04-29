@@ -80,7 +80,9 @@ public class RoomsService
     
     public bool HasReservations(int roomId)
     {
-        return TrainingCenterData.Reservations.Any(r => r.RoomId == roomId);
+        return TrainingCenterData.Reservations.Any(r => 
+            r.RoomId == roomId &&
+            r.Status != "cancelled");
     }
 
     public bool Delete(int id)

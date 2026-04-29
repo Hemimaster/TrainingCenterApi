@@ -15,13 +15,13 @@ public class ReservationsService
         return TrainingCenterData.Reservations.FirstOrDefault(r => r.Id == id);
     }
     
-    public IEnumerable<Reservation> GetFiltered(DateTime? date, string? status, int? roomId)
+    public IEnumerable<Reservation> GetFiltered(DateOnly? date, string? status, int? roomId)
     {
         var reservations = TrainingCenterData.Reservations.AsEnumerable();
 
         if (date.HasValue)
         {
-            reservations = reservations.Where(r => r.Date.Date == date.Value.Date);
+            reservations = reservations.Where(r => r.Date == date.Value);
         }
 
         if (!string.IsNullOrWhiteSpace(status))
@@ -44,7 +44,7 @@ public class ReservationsService
     {
         return TrainingCenterData.Reservations.Any(r =>
             r.RoomId == newReservation.RoomId &&
-            r.Date.Date == newReservation.Date.Date &&
+            r.Date == newReservation.Date &&
             newReservation.StartTime < r.EndTime &&
             newReservation.EndTime > r.StartTime
         );
@@ -55,7 +55,7 @@ public class ReservationsService
         return TrainingCenterData.Reservations.Any(r =>
             r.Id != ignoredReservationId &&
             r.RoomId == updatedReservation.RoomId &&
-            r.Date.Date == updatedReservation.Date.Date &&
+            r.Date == updatedReservation.Date &&
             updatedReservation.StartTime < r.EndTime &&
             updatedReservation.EndTime > r.StartTime
         );

@@ -65,7 +65,7 @@ public static class TrainingCenterData
             RoomId = 1,
             OrganizerName = "Anna Kowalska",
             Topic = "HTTP Basics",
-            Date = new DateTime(2026, 5, 10),
+            Date = new DateOnly(2026, 5, 10),
             StartTime = new TimeOnly(9, 0),
             EndTime = new TimeOnly(11, 0),
             Status = "confirmed"
@@ -76,7 +76,7 @@ public static class TrainingCenterData
             RoomId = 1,
             OrganizerName = "Jan Nowak",
             Topic = "REST API",
-            Date = new DateTime(2026, 5, 10),
+            Date = new DateOnly(2026, 5, 10),
             StartTime = new TimeOnly(11, 30),
             EndTime = new TimeOnly(13, 0),
             Status = "planned"
@@ -87,7 +87,7 @@ public static class TrainingCenterData
             RoomId = 2,
             OrganizerName = "Maria Wiśniewska",
             Topic = "C# Advanced",
-            Date = new DateTime(2026, 5, 11),
+            Date = new DateOnly(2026, 5, 11),
             StartTime = new TimeOnly(10, 0),
             EndTime = new TimeOnly(12, 0),
             Status = "confirmed"
@@ -98,7 +98,7 @@ public static class TrainingCenterData
             RoomId = 3,
             OrganizerName = "Piotr Zieliński",
             Topic = "Databases",
-            Date = new DateTime(2026, 5, 12),
+            Date = new DateOnly(2026, 5, 12),
             StartTime = new TimeOnly(8, 0),
             EndTime = new TimeOnly(10, 0),
             Status = "cancelled"
@@ -109,7 +109,7 @@ public static class TrainingCenterData
             RoomId = 5,
             OrganizerName = "Katarzyna Lewandowska",
             Topic = "ASP.NET Core",
-            Date = new DateTime(2026, 5, 13),
+            Date = new DateOnly(2026, 5, 13),
             StartTime = new TimeOnly(14, 0),
             EndTime = new TimeOnly(16, 0),
             Status = "confirmed"
@@ -120,7 +120,7 @@ public static class TrainingCenterData
             RoomId = 2,
             OrganizerName = "Tomasz Wójcik",
             Topic = "Docker Basics",
-            Date = new DateTime(2026, 5, 14),
+            Date = new DateOnly(2026, 5, 14),
             StartTime = new TimeOnly(9, 30),
             EndTime = new TimeOnly(11, 30),
             Status = "planned"
